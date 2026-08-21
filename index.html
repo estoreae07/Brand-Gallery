@@ -6,7 +6,7 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="hero"><div class="nav"><a class="brand" href="#top">PRODUCT <span>CATALOGUE</span></a><a class="nav-link" href="#catalogue">Browse products</a></div>
+  <header class="hero"><div class="nav"><a class="brand" href="#top">PRODUCT <span>CATALOGUE</span></a><div class="nav-actions"><a class="nav-link" href="#catalogue">Browse products</a><button id="cartButton" class="cart-button">Cart <span id="cartCount">0</span></button></div></div>
     <div class="intro"><p class="eyebrow">YOUR PRODUCT COLLECTION</p><h1>Find the right product, <em>fast.</em></h1><p class="lead">Search our catalogue by product name, Product ID, SKU, category, or subcategory.</p><label class="search"><span>⌕</span><input id="search" type="search" autocomplete="off" placeholder="Search products, ID, or SKU" aria-label="Search products"></label></div>
   </header>
   <main id="catalogue"><section class="catalogue-head"><div><p class="eyebrow">CATALOGUE</p><h2>Explore products</h2></div><button id="filtersButton" class="filter-button" aria-expanded="false">Filters <span id="filterCount"></span></button></section>
@@ -14,6 +14,7 @@
     <div class="result-line"><span id="resultCount"></span><button id="clear" class="text-button" hidden>Clear filters</button></div><section id="grid" class="grid" aria-live="polite"></section><button id="loadMore" class="load-more">Show more products</button>
   </main>
   <dialog id="productDialog"><button class="close" aria-label="Close product">×</button><article id="productDetail"></article></dialog>
+  <aside id="cartPanel" class="cart-panel" aria-label="Shopping cart"><div class="cart-head"><h2>Your cart</h2><button id="cartClose" class="close-cart" aria-label="Close cart">×</button></div><div id="cartItems" class="cart-items"></div><div class="cart-total"><span>Total</span><strong id="cartTotal">AED 0.00</strong></div><button id="whatsappOrder" class="whatsapp-order">Order on WhatsApp</button></aside><div id="cartShade" class="cart-shade" hidden></div>
   <footer>© <span id="year"></span> Product Catalogue <span>•</span> Prices in AED</footer>
   <script src="products.js"></script><script src="app.js"></script>
 </body></html>
